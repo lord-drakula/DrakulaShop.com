@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Sign-Up</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/icons.css">
+  <link rel="stylesheet" href="../css/mdb.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+
+
+</head>
+<body>
+
+<header class="signin_head">
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar py-0">
+
+    <a href="../index.html" class="navbar-brand">
+      <img src="../media/logo.jpg" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" 
+      data-toggle="collapse" data-target="#BasicNavbar" 
+      aria-controls="BasicNavbar" aria-expanded="False" 
+      aria-label="Toggle Navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="BasicNavbar">
+
+      <div class="mb-2 my-lg-0 mr-auto d-flex">
+
+        <div class="nav-item dropdown pt-1 pr-2">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            Laptop's
+          </a>
+        </div>
+
+        <div class="nav-item dropdown pt-1">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            Mobile
+          </a>
+        </div>
+
+      </div>
+
+
+      <form class="form-inline my-2 my-lg-0">
+        <input id="tags" type="search" placeholder="Search" class="form-control search_input custum_search live-search-box">
+      </form>
+
+      <div class="mb-2 my-lg-0">
+        <div class="nav-item dropdown">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            <img src="../media/user.png" class="user_img_icon">
+            <div class="is_on"></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right overflow-hidden" 
+            aria-labelledby="navbarDropdown">
+            <a href="./singin.html" class="dropdown-item" target="_blank">
+              Sign-in
+            </a>
+            <a href="./signup.html" class="dropdown-item text-success" target="_blank">
+              Sign-up
+            </a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+</header>
+
+
+<div class="login-box">
+    <h2>Sign-Up</h2>
+    <form class="text-center">
+      <div class="user-box">
+        <input type="email" id="email" name="" required="" maxlength="30">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" id="password" name="" required="" maxlength="20">
+        <label>Password</label>
+      </div>
+      <div class="user-box">
+        <input type="text" id="username" name="" required="" maxlength="12">
+        <label>Username</label>
+      </div>
+      <a href="#" type="submit" class="btn waves-effact waves-black"> 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+      
+    </form>
+  </div>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/mdb.min.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<script src="../js/main.js"></script>
+
+<script>
+  jQuery(document).ready(function($){
+
+$('.image-container .card').each(function(){
+$(this).prop('id', $(this).prop('id').toLowerCase());
+});
+
+$('.live-search-box').on('keyup', function(){
+
+var searchTerm = $(this).val().toLowerCase();
+
+    $('.image-container .card').each(function(){
+        console.log($(this).prop('id').indexOf(searchTerm));
+        if ($(this).prop('id').indexOf(searchTerm) >= 0 || searchTerm.length < 1) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+
+    });
+
+});
+
+});
+</script>
+
+<script>
+    $(document).ready(function () {
+      $(':input[type="submit"]').prop('disabled', true);
+      $('#email').keyup(function () {
+        ToggleButton();
+      });
+      $('#password').keyup(function () {
+        ToggleButton();
+      });
+      $('#username').keyup(function () {
+        ToggleButton();
+      });
+
+    });
+    function ToggleButton() {
+      if (
+        ($('#email').val() != '') &&
+        ($('#password').val() != '') &&
+        ($('#username').val() != '')
+      ) {
+        $(':input[type="submit"]').prop('disabled', false);
+        return true;
+      } else {
+        $(':input[type="submit"]').prop('disabled', true);
+        return false;
+      }
+    };
+  </script>
+
+</body>
+</html>

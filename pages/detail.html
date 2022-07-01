@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>More Information</title>
+  <link rel="icon" href="../img/logo.jpg">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">
+  <link rel="stylesheet" href="../css/gallery.min.css">
+  <link rel="stylesheet" href="../css/mdb.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar py-0">
+
+    <a href="../index.html" class="navbar-brand">
+      <img src="../media/logo.jpg" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" 
+      data-toggle="collapse" data-target="#BasicNavbar" 
+      aria-controls="BasicNavbar" aria-expanded="False" 
+      aria-label="Toggle Navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="BasicNavbar">
+
+      <div class="mb-2 my-lg-0 mr-auto d-flex">
+
+        <div class="nav-item dropdown pt-1 pr-2">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            Laptop's
+          </a>
+        </div>
+
+        <div class="nav-item dropdown pt-1">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            Mobile
+          </a>
+        </div>
+
+      </div>
+
+
+      <form class="form-inline my-2 my-lg-0">
+        <input id="tags" type="search" placeholder="Search" class="form-control search_input custum_search live-search-box">
+      </form>
+
+      <div class="mb-2 my-lg-0">
+        <div class="nav-item dropdown">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            <img src="../media/user.png" class="user_img_icon">
+            <div class="is_on"></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right overflow-hidden" 
+            aria-labelledby="navbarDropdown">
+            <a href="./singin.html" class="dropdown-item text-success" target="_blank">
+              Sign-in
+            </a>
+            <a href="./signup.html" class="dropdown-item" target="_blank">
+              Sign-up
+            </a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center pt-4">
+
+
+          <div class="col-md-8 mt-5 mb-3">
+            <div class="card shadow-lg waves-effect waves-black">
+              <div class="waves-effect waves-light">
+
+                      <div class="horizantal">
+                        <section class="wow fadeIn">
+                          <div class="containers">
+                            <div class="main-img">
+                              <img src="../media/a03.jpg" id="current">
+                            </div>
+                            <div class="imgs mt-1">
+                              <img src="../media/a12.jpg">
+                              <img src="../media/a32.jpg">
+                              <img src="../media/pocom4.jpg">
+                              <img src="../media/orteltv.jpg">
+                            </div>
+                          </div>
+                        </section>
+                        </a>
+                      </div>
+
+              </div>
+    
+    
+              <div class="px-3">
+                <div class="d-flex justify-content-between">
+                  <div class="text-muted">
+                    <p>Model: Mechanic;</p>
+                    <p>Location: Uzbekistan;</p>
+                    <p> <a href="#0" class="text-decoration-none text-seccess">If you want to see more click here...</a></p>
+                  </div>
+                  <div class="text-success">45$</div>
+                </div>
+                <div class="small">We are always 1ˢᵗ</div>
+                <div class="d-flex justify-content-between">
+                <div class="mt-2">
+                  <input type="number" value="1" min="1" max="10" class="input_number">
+                </div>
+    
+                <button id="add_cart" class="btn cart btn-md btn-success rounded shadow-none">
+                  Add to card
+                </button>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+      </div>
+    </div>
+
+  </main>
+
+  
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/jquery-ui.js"></script>
+  <script src="../js/gallery.min.js"></script>
+  <script src="../js/mdb.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    $( document ).ready(function() {
+    new WOW().init()
+  });
+  </script>
+
+<script>
+  $(function(){
+    $(".cart").click(function(){
+      $(".successfully-saved")
+      .css("display", "block")
+      .delay(3000).fadeOut(500);
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $(':input[type="submit"]').prop('disabled', true);
+    $('#id_tel').keyup(function () {
+      ToggleButton();
+    });
+    $('#id_text').keyup(function () {
+      ToggleButton();
+    });
+    $('#id_date').keyup(function () {
+      ToggleButton();
+    });
+    $('#id_file').keyup(function () {
+      ToggleButton();
+    });
+
+  });
+  function ToggleButton() {
+    if (
+      ($('#id_tel').val() != '') &&
+      ($('#id_text').val() != '')&&
+      ($('#id_date').val() != '')&&
+      ($('#id_file').val() != '')
+    ) {
+      $(':input[type="submit"]').prop('disabled', false);
+      return true;
+    } else {
+      $(':input[type="submit"]').prop('disabled', true);
+      return false;
+    }
+  };
+</script>
+
+<script>
+  const current = document.querySelector('#current');
+const imgs = document.querySelectorAll('.imgs img');
+opacity = 0.6;
+imgs[0].style.opacity = opacity;
+imgs.forEach(img => img.addEventListener('click', imgClick));
+function imgClick(e) {
+  imgs.forEach(img => img.style.opacity = 1);
+  current.src = e.target.src;
+  current.classList.add('fade-in');
+  setTimeout(() => current.classList.remove('fade-in'), 500);
+  e.target.style.opacity = opacity;
+};
+</script>
+
+</body>
+</html>

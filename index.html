@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>DrakulaShop.com</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/jquery-ui.css">
+  <link rel="stylesheet" href="./css/icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+<header>
+
+  <div class="header_alert">
+    <div class="successfully-saved">
+      Product aded successfully
+    </div>
+  </div>
+
+  <div class="header_alert">
+    <div class="successfully-removed">
+      Product removed successfully
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar py-0">
+
+    <a href="./index.html" class="navbar-brand">
+      <img src="./media/logo.jpg" class="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" 
+      data-toggle="collapse" data-target="#BasicNavbar" 
+      aria-controls="BasicNavbar" aria-expanded="False" 
+      aria-label="Toggle Navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="BasicNavbar">
+
+      <div class="mb-2 my-lg-0 mr-auto d-flex">
+
+        <div class="nav-item dropdown pt-1 pr-2">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            Laptop's
+          </a>
+          <div class="dropdown-menu dropdown-menu-left overflow-hidden" 
+            aria-labelledby="navbarDropdown">
+            <a href="#0" class="dropdown-item">
+              Lenovo
+            </a>
+            <a href="#0" class="dropdown-item">
+              Asus
+            </a>
+            <a href="#0" class="dropdown-item">
+              Acer
+            </a>
+            <a href="#0" class="dropdown-item">
+              Hp
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-item dropdown pt-1">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            Mobile
+          </a>
+          <div class="dropdown-menu dropdown-menu-left overflow-hidden" 
+            aria-labelledby="navbarDropdown">
+            <a href="#0" class="dropdown-item">
+              Samsung
+            </a>
+            <a href="#0" class="dropdown-item">
+              Huawei
+            </a>
+            <a href="#0" class="dropdown-item">
+              Sony
+            </a>
+            <a href="#0" class="dropdown-item">
+              Htc
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div>
+        <button type="button" 
+        class="btn Mybtn py-2" 
+        data-toggle="modal" 
+        data-target="#cart">
+          Cart (<span class="total-count"></span>)
+        </button>
+        <button class="clear-cart btn Mybtn py-2">
+          Clear Cart
+        </button>
+      </div>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input id="tags" type="search" placeholder="Search" class="form-control search_input custum_search live-search-box">
+      </form>
+
+      <div class="mb-2 my-lg-0">
+        <div class="nav-item dropdown">
+          <a href="#0" class="nav-link ml-lg-2 p-0" id="navbarDropdown" 
+            role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false">
+            <img src="./media/user.png" class="user_img_icon">
+            <div class="is_on"></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right overflow-hidden" 
+            aria-labelledby="navbarDropdown">
+            <a href="./pages/singin.html" class="dropdown-item" target="_blank">
+              Sign-in
+            </a>
+            <a href="./pages/signup.html" class="dropdown-item" target="_blank">
+              Sign-up
+            </a>
+
+
+            <div class="theme-switch-wrapper dropdown-item">
+
+              <label class="theme-switch" for="checkbox">
+
+                <input type="checkbox" id="checkbox" />
+
+                <div class="slider round"></div>
+
+              </label>
+
+              <em>Dark Mode!</em>
+              
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+
+   <div id="NavBack" class="view waves-effect waves-light">
+     <div class="mask rgba-black-strong">
+       <div class="container-fluid d-flex align-items-center 
+        justify-content-start h-100">
+         <div class="m-auto">
+
+          <div class="h3 col-md-6 text-light">
+            <div class="text-uppercase mb-4">
+              Create a website you're proud of
+            </div>
+            <div class="text-muted h5 mb-4">
+              Discover the platform that gives you the 
+              freedom to create, design, manage and develop 
+              your web presence exactly the way you want.
+            </div>
+          </div>
+
+          <div class="px-2">
+            <button class="btn btn-md header_btn">
+              Sign-in
+            </button>
+            <button class="btn btn-md header_btn">
+              Sign-up
+            </button>
+          </div>
+
+         </div>
+       </div>
+     </div>
+   </div>
+
+</header>
+
+<main class="pt-4">
+  
+  <div class="row d-flex m-auto justify-content-center image-container">
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="A32">
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+          <a href="">
+            <img src="./media/a32.jpg" class="product_img" alt="Card image cap smart">
+          </a>
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model; Samsung Galaxy A32 4/64Gb Black;
+          </p>
+        </div>
+        <div class="card-text con-price">
+          Price: 2 884 000 sum;
+        </div>
+
+
+        <div class="con-btn">
+          <Button data-name="A32" data-price="2884000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+              <!-- <Button onclick="plusLess(event, 'less')" class="less">
+                  -
+              </Button> -->
+
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="A32">
+                -
+              </button>
+              <!-- <button class="minus-item input-group-addon btn" data-name="A32">
+                -
+              </button> -->
+
+              <input type="number" class="item-count form-control" data-name="A32" value="1">
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="A32">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="A03">
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+            <img src="./media/a03.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model: Galaxy A03 3/32Gb Black;
+          </p>
+        </div>
+        <br>
+        <div class="card-text con-price">
+          Price: 1 500 000 sum;
+        </div>
+
+        <div class="con-btn">
+          <Button data-name="A03" data-price="1500000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="A03">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="A03" value="1">
+
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="A03">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="Poco">
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+            <img src="./media/pocom4.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model: Xiaomi POCO M4 Pro 6/128GB 5G Black;
+          </p>
+        </div>
+
+        <div class="card-text con-price">
+          Price: 3 310 000 sum;
+        </div>
+
+        <div class="con-btn">
+          <Button data-name="Poco" data-price="3310000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="Poco">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="Poco" value="1">
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="Poco">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="A12">
+
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+            <img src="./media/a12.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model: Galaxy A12 4/64Gb red;
+          </p>
+        </div>
+        <br>
+
+        <div class="card-text con-price">
+          Price: 2 055 000 sum;
+        </div>
+
+        <div class="con-btn">
+          <Button data-name="A12" data-price="2055000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="A12">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="A12" value="1">
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="A12">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="Polaris">
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+          <img src="./media/polaris.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model; Hair cur machine Polaris PHC 0401RB Flex Motion;
+          </p>
+        </div>
+        <div class="card-text con-price">
+          Price: 274 000 sum;
+        </div>
+
+        
+
+
+        <div class="con-btn">
+          <Button data-name="Polaris" data-price="274000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="Polaris">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="Polaris" value="1">
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="Polaris">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="Cleaner">
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+            <img src="./media/vacuumcleaner.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model: Vacuum Cleaner Polaris PVC 1834 Silent Turquoise;
+          </p>
+        </div>
+        <br>
+        <div class="card-text con-price">
+          Price: 260 000 sum;
+        </div>
+
+        <div class="con-btn">
+          <Button data-name="Cleaner" data-price="260000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="Cleaner">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="Cleaner" value="1">
+
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="Cleaner">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="Sumsung">
+        <div class="py-0">
+          <span class="best_price">
+            Best price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+            <img src="./media/samsungtv.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model: Televizor Samsung UE43AU8000 Smart;
+          </p>
+        </div>
+        <br>
+        <div class="card-text con-price">
+          Price: 7 200 000 sum;
+        </div>
+
+        <div class="con-btn">
+          <Button data-name="Sumsung" data-price="7200000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="Sumsung">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="Sumsung" value="1">
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="Sumsung">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3">
+      <div class="card mx-2" id="Ortel">
+
+        <div class="py-0">
+          <span class="best_price">
+            Best Price
+          </span>
+        </div>
+
+        <div class="mt-5 waves-effect waves-light text-center img_box">
+            <img src="./media/orteltv.jpg" class="product_img" alt="Card image cap smart">
+        </div>
+
+        <div class="card-block con-text">
+          <p class="card-title">
+            Model: Televizor Ortel LED 43AF90G;
+          </p>
+        </div>
+        <br>
+        <div class="card-text con-price">
+          Price: 2 950 000 sum;
+        </div>
+
+        <div class="con-btn">
+          <Button data-name="Ortel" data-price="2950000" onclick="handleAdd(event)" class="add add-to-cart btn">
+              Purchase
+          </Button>
+    
+          <div class="con-input-btns">
+              <button class="minus-item input-group-addon btn less" onclick="plusLess(event, 'less')" data-name="Ortel">
+                -
+              </button>
+
+              <input type="number" class="item-count form-control" data-name="Ortel" value="1">
+
+              <button class="plus plus-item btn input-group-addon add-to-cart" onclick="plusLess(event, 'plus')" data-name="Ortel">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+</div>
+
+
+
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4">
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/nurmuhammad.abdusamadov.5" role="button">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#0" role="button">
+        <i class="fab fa-twitter"></i>
+      </a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="nurmuhammadabdusamatov7777@gmail.com" role="button">
+        <i class="fab fa-google"></i>
+      </a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/_lord_drakula_" role="button">
+        <i class="fab fa-instagram"></i>
+      </a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#0" role="button">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+      <a class="btn btn-outline-light btn-floating m-1" href="#0" role="button">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" href="https://t.me/Lord_Drakula" role="button">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </section>
+    <section>
+      <div class="row">
+        <div class="col-lg-12">
+          <h5 class="text-uppercase">Technology List!!!</h5>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#0" class="text-white">Html</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Css</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Scss</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Sass</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#0" class="text-white">Bootstrap 4</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Bootstrap 5</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">MDBootstrap</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Others</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#0" class="text-white">JavaScript</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Pyton</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Pyp</a>
+            </li>
+            <li>
+              <a href="#0" class="text-white">Django</a>
+            </li>
+          </ul>
+        </div>
+        <br><br>
+        <div class="col-lg-12 mt-5">
+          Contact and invites: +998997900857
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="#">DrakulaShop.com</a>
+  </div>
+</footer>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+ <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: <span class="total-cart"></span> sum</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Order now</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/mdb.min.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/main.js"></script>
+
+<script>
+  jQuery(document).ready(function($){
+
+$('.image-container .card').each(function(){
+$(this).prop('id', $(this).prop('id').toLowerCase());
+});
+
+$('.live-search-box').on('keyup', function(){
+
+var searchTerm = $(this).val().toLowerCase();
+
+    $('.image-container .card').each(function(){
+        console.log($(this).prop('id').indexOf(searchTerm));
+        if ($(this).prop('id').indexOf(searchTerm) >= 0 || searchTerm.length < 1) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+
+    });
+
+});
+
+});
+</script>
+
+</body>
+</html>
